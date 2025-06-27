@@ -7,19 +7,21 @@ import { LoginForm } from "../components/form/LoginForm";
 import { UserContext } from "../context/UserContext";
 
 export function PrivateLayout() {
-    const { isLoggedIn } = useContext(UserContext);
+  const { isLoggedIn } = useContext(UserContext);
 
-    return (
-        <>
-            <Header />
-            {isLoggedIn ? <Outlet /> : (
-                <div className="container">
-                    <PageTitle title="Unuathorized access" />
-                    <PageTitle title="Login first" />
-                    <LoginForm />
-                </div>
-            )}
-            <Footer isPublicPage={false} />
-        </>
-    )
+  return (
+    <>
+      <Header />
+      {isLoggedIn ? (
+        <Outlet />
+      ) : (
+        <div className="container">
+          <PageTitle title="Unuathorized access" />
+          <PageTitle title="Login first" />
+          <LoginForm />
+        </div>
+      )}
+      <Footer isPublicPage={false} />
+    </>
+  );
 }
