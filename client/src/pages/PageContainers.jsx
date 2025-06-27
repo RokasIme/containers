@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { PageTitle } from "../components/page-title/PageTitle";
-import { ContainersList } from "../components/categories/ContainerList";
+import { ContainersList } from "../components/containers/ContainerList";
 
 export function PageContainers() {
   const [data, setData] = useState([]);

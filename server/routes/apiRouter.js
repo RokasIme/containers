@@ -7,6 +7,7 @@ import express from "express";
 import { postRegister } from "../api/postRegister.js";
 import { postLogin } from "../api/postLogin.js";
 import { getAllContainers } from "../api/getAllContainers.js";
+import { getBoxesInContainer } from "../api/getBoxesInContainer.js";
 
 export const apiRouter = express.Router();
 
@@ -14,7 +15,7 @@ apiRouter.post("/register", postRegister);
 apiRouter.post("/login", postLogin);
 
 apiRouter.get("/containers", getAllContainers);
-// apiRouter.get('/categories/featured', getFeaturedCategories);
+apiRouter.get("/containers/:id", getBoxesInContainer);
 
 // apiRouter.get('/movies', getAllMovies);
 // apiRouter.get('/movies/:slug', getMovieBySlug);

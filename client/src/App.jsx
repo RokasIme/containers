@@ -11,6 +11,7 @@ import { PrivateLayout } from "./layout/PrivateLayout";
 import { PageNotFound } from "./pages/PageNotFound";
 import { UserContextWrapper } from "./context/UserContextWrapper";
 import { PageContainers } from "./pages/PageContainers";
+import { PageContainerInner } from "./pages/PageContainerInner";
 
 export function App() {
   return (
@@ -22,7 +23,7 @@ export function App() {
             {/* <Route path="/movies" element={<PageMovies />} /> */}
             {/* <Route path="/movies/:movie" element={<PageMovieInner />} /> */}
             <Route path="/containers" element={<PageContainers />} />
-            {/* <Route path="/categories/:category" element={<PageCategoryInner />} /> */}
+            <Route path="/containers/:id" element={<PageContainerInner />} />
             <Route path="/register" element={<PageRegister />} />
             <Route path="/login" element={<PageLogin />} />
           </Route>
